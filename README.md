@@ -88,7 +88,6 @@ The application automatically loads the trained model from this folder.
 
 ## Important Notes
 
-- The `venv` folder is not included in the project ZIP.
 - Create the virtual environment using:
 
     python -m venv venv
@@ -96,10 +95,4 @@ The application automatically loads the trained model from this folder.
 - Install required packages using:
 
     pip install -r requirements.txt
-
-- The trained ViT model is required for disease prediction.
-- The dataset is not required to run the web application.
-- Make sure the trained model is available inside:
-
-    models/chilidoc_vit_model/
 
