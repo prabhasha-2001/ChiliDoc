@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChiliDoc - Bacterial Spot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 to-gray-100 min-h-screen">
+
+<div class="max-w-5xl mx-auto p-6">
+
+  <button onclick="goBack()" 
+    class="mb-6 bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition shadow-lg font-bold">
+    ← Back to Dashboard
+  </button>
+
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+
+    <div class="relative">
+        <img src="{{ url_for('static', filename='images/bacterial_spot.JPG') }}" class="w-full h-64 object-contain bg-gray-100" alt="Bacterial Spot Symptoms">
+        <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent w-full p-6">
+            <h1 class="text-4xl font-bold text-white">
+                Bacterial Spot 🦠
+            </h1>
+        </div>
+    </div>
+
+    <div class="p-8 space-y-8">
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-sm">
+          <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center">
+            <span class="mr-2">🔍</span> Scientific Cause
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li><b>Bacteria:</b> <i>Xanthomonas campestris</i></li>
+            <li>Spreads through infected seeds and water splash</li>
+            <li>Enters plants through wounds or natural openings</li>
+            <li>Favors warm, wet, and windy weather</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-2xl border-l-4 border-red-500 shadow-sm">
+          <h2 class="text-xl font-bold text-red-800 mb-3 flex items-center">
+            <span class="mr-2">⚠️</span> Key Symptoms
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li>Small, water-soaked spots on leaves</li>
+            <li>Spots turn <b>dark brown with yellow halos</b></li>
+            <li>Scabby, raised spots on the chili fruit</li>
+            <li>Severe cases cause leaves to turn yellow and drop</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-500">
+          <h2 class="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+            <span class="mr-2">🚶</span> Immediate Actions
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Remove and destroy infected plants immediately</li>
+            <li>Disinfect garden tools with alcohol or bleach</li>
+            <li>Stop overhead watering to prevent splashing</li>
+            <li>Avoid handling plants when they are wet</li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-2xl border-l-4 border-purple-500">
+          <h2 class="text-xl font-bold text-purple-800 mb-3 flex items-center">
+            <span class="mr-2">🛡️</span> Prevention Tips
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Buy certified disease-free seeds</li>
+            <li>Practice a 3-year crop rotation (no peppers/tomatoes)</li>
+            <li>Space plants widely for better air flow</li>
+            <li>Mulch the soil to prevent bacteria splash-back</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="mr-2">💊</span> Recommended Bactericides
+        </h2>
+        <div class="overflow-hidden border border-gray-200 rounded-2xl shadow-sm">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="p-4 font-semibold uppercase text-sm">Treatment</th>
+                <th class="p-4 font-semibold uppercase text-sm">Type</th>
+                <th class="p-4 font-semibold uppercase text-sm">Dosage</th>
+                <th class="p-4 font-semibold uppercase text-sm">Application</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700 divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Copper Oxychloride</td>
+                <td class="p-4 text-sm italic text-gray-500">Bactericide</td>
+                <td class="p-4 font-semibold">2–3 g/L</td>
+                <td class="p-4">Spray every 7–10 days in wet weather</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Copper + Mancozeb</td>
+                <td class="p-4 text-sm italic text-gray-500">Mix Treatment</td>
+                <td class="p-4 font-semibold">Standard Mix</td>
+                <td class="p-4">Combining helps manage resistance</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Streptomycin Sulfate</td>
+                <td class="p-4 text-sm italic text-gray-500">Antibiotic</td>
+                <td class="p-4 font-semibold">0.5 g/L</td>
+                <td class="p-4">Use only for severe nursery outbreaks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="text-center text-gray-500 mt-8 text-sm italic">
+    * Bacterial spot can survive in the soil for years. Always rotate your crops!
+  </p>
+
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "/";
+}
+</script>
+
+</body>
+</html>

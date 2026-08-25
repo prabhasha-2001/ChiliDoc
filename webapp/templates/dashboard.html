@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChiliDoc 🌶️ | AI Plant Doctor</title> <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen font-sans p-4 md:p-10">
+
+    <div class="max-w-4xl mx-auto">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-green-800 drop-shadow-sm">
+                🌶️ ChiliDoc
+            </h1>
+            <p class="text-green-700 mt-3 text-lg font-medium">
+                Advanced AI Diagnosis for Sri Lankan Chili Farmers
+            </p>
+        </header>
+
+        <div class="glass-card p-8 md:p-12 text-center shadow-2xl rounded-[2rem] border border-white/20">
+            
+            <div class="mb-8">
+                <label for="imageInput" class="block mb-4 text-gray-600 font-semibold italic">
+                    Upload a clear photo of the infected leaf
+                </label>
+                
+                <div class="upload-zone relative group cursor-pointer rounded-2xl p-10 border-2 border-dashed border-green-400 bg-green-50/50 hover:bg-green-100/50 transition-all">
+                    <input type="file" id="imageInput" accept="image/*" 
+                           class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                    <div class="space-y-2">
+                        <div class="text-5xl">📸</div>
+                        <p class="text-green-700 font-bold">Click to Upload or Drag & Drop</p>
+                        <p class="text-xs text-gray-400">Supports JPG, PNG (Max 5MB)</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="checkHealth()" 
+                class="w-full md:w-auto bg-green-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:bg-green-700 hover:shadow-xl active:scale-95 transition-all shadow-lg">
+                Analyze Leaf Health 🩺
+            </button>
+
+            <div id="loader" class="hidden mt-8 mx-auto w-12 h-12 border-4 border-green-200 border-t-green-600 rounded-full animate-spin"></div>
+
+            <div id="resultArea" class="hidden mt-10 p-8 rounded-3xl bg-white border border-gray-100 shadow-inner animate-fade-in">
+                <div class="flex flex-col items-center">
+                    <h2 id="statusText" class="text-3xl font-black mb-4"></h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 w-full text-left mb-6">
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <span class="text-xs uppercase font-bold text-gray-400 block mb-1">Likely Cause</span>
+                            <p id="causeText" class="text-gray-700 leading-relaxed"></p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <span class="text-xs uppercase font-bold text-gray-400 block mb-1">Quick Tip</span>
+                            <p id="treatmentText" class="text-gray-700 leading-relaxed"></p>
+                        </div>
+                    </div>
+
+                    <button id="detailBtn" 
+                        class="bg-emerald-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-emerald-700 transition flex items-center gap-2">
+                        View Full Treatment Guide <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-green-800/60 text-sm">
+            <p>© 2026 ChiliDoc AI Systems | Empowering Sustainable Agriculture</p>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 

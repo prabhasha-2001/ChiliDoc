@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChiliDoc - White Spot Disease</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 to-gray-100 min-h-screen">
+
+<div class="max-w-5xl mx-auto p-6">
+
+  <button onclick="goBack()" 
+    class="mb-6 bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition shadow-lg font-bold">
+    ← Back to Dashboard
+  </button>
+
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+
+    <div class="relative">
+        <img src="{{ url_for('static', filename='images/white_spot.JPG') }}" class="w-full h-64 object-contain bg-gray-100" alt="White Spot Symptoms">
+        <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent w-full p-6">
+            <h1 class="text-4xl font-bold text-white">
+                White Spot Disease ⚪
+            </h1>
+        </div>
+    </div>
+
+    <div class="p-8 space-y-8">
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-sm">
+          <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center">
+            <span class="mr-2">🔍</span> Scientific Cause
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li><b>Pathogen:</b> Often Fungal (e.g., Oidium spp.)</li>
+            <li>Thrives in high humidity with low light</li>
+            <li>Poor air circulation around the base</li>
+            <li>Spread by spores through wind or water</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-2xl border-l-4 border-red-500 shadow-sm">
+          <h2 class="text-xl font-bold text-red-800 mb-3 flex items-center">
+            <span class="mr-2">⚠️</span> Key Symptoms
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li>Circular <b>white or gray powdery spots</b></li>
+            <li>Spots enlarge and cover the whole leaf</li>
+            <li>Leaves eventually turn yellow and brittle</li>
+            <li>Stunted growth of new chili pods</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-500">
+          <h2 class="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+            <span class="mr-2">🚶</span> Immediate Actions
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Prune and remove heavily infected leaves</li>
+            <li>Stop overhead irrigation (keep leaves dry)</li>
+            <li>Improve sunlight exposure to the plant</li>
+            <li>Clear weeds from the base of the plant</li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-2xl border-l-4 border-purple-500">
+          <h2 class="text-xl font-bold text-purple-800 mb-3 flex items-center">
+            <span class="mr-2">🛡️</span> Prevention Tips
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Ensure <b>wide spacing</b> between plants</li>
+            <li>Use clean, sterilized gardening tools</li>
+            <li>Plant in areas with good morning sunlight</li>
+            <li>Apply organic mulch to prevent spore splash</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="mr-2">💊</span> Recommended Fungicides
+        </h2>
+        <div class="overflow-hidden border border-gray-200 rounded-2xl shadow-sm">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="p-4 font-semibold uppercase text-sm">Chemical</th>
+                <th class="p-4 font-semibold uppercase text-sm">Type</th>
+                <th class="p-4 font-semibold uppercase text-sm">Dosage</th>
+                <th class="p-4 font-semibold uppercase text-sm">Application</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700 divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Carbendazim</td>
+                <td class="p-4 text-sm italic text-gray-500">Fungicide</td>
+                <td class="p-4 font-semibold">1 g/L</td>
+                <td class="p-4">Spray thoroughly on both sides of leaves</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Wettable Sulfur</td>
+                <td class="p-4 text-sm italic text-gray-500">Fungicide</td>
+                <td class="p-4 font-semibold">2 g/L</td>
+                <td class="p-4">Effective for early stages</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Mancozeb</td>
+                <td class="p-4 text-sm italic text-gray-500">Fungicide</td>
+                <td class="p-4 font-semibold">2.5 g/L</td>
+                <td class="p-4">Spray every 10 days until clear</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="text-center text-gray-500 mt-8 text-sm italic">
+    * White spots spread very fast in the shade. Move plants to the sun if possible!
+  </p>
+
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "/";
+}
+</script>
+
+</body>
+</html>

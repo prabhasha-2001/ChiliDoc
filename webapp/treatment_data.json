@@ -1,0 +1,38 @@
+{
+    "Healthy": {
+        "title": "Your Plant is Healthy!",
+        "page": "healthy.html",
+        "cause": "No disease detected. Leaf is healthy.",
+        "quick_tip": "Maintain moist soil, ensure 6-8 hours of sunlight, and apply K44 fertilizer every 2 weeks after flowering."
+    },
+    "Bacterial_Spot": {
+        "title": "Bacterial Spot",
+        "page": "bacterial_spot.html",
+        "cause": "Caused by Xanthomonas campestris bacteria, spreads through infected seeds and water splash.",
+        "quick_tip": "Remove infected leaves, apply Copper Oxychloride (2-3 g/L), and avoid overhead watering."
+    },
+    "Cercospora_Leaf_Spot": {
+        "title": "Cercospora Leaf Spot (Frogeye)",
+        "page": "cercospora.html",
+        "cause": "Fungus Cercospora capsici, spread by wind and rain splash, thrives in high humidity.",
+        "quick_tip": "Remove and burn infected leaves, apply Mancozeb (2-2.5 g/L) every 7-10 days."
+    },
+    "Curl_Virus": {
+        "title": "Chili Leaf Curl Virus (CLCuv)",
+        "page": "curl_virus.html",
+        "cause": "Transmitted by Whiteflies (Bemisia tabaci), common in warm dry weather.",
+        "quick_tip": "Uproot and burn infected plants, control whiteflies with Neem Oil Spray (3-5 ml/L)."
+    },
+    "Nutrition_Deficiency": {
+        "title": "Nutrition Deficiency",
+        "page": "nutrition.html",
+        "cause": "Lack of Nitrogen, Phosphorus, or Potassium; soil pH imbalance.",
+        "quick_tip": "Apply balanced NPK fertilizer every 2 weeks and test soil pH."
+    },
+    "White_Spot": {
+        "title": "White Spot Disease",
+        "page": "white_spot.html",
+        "cause": "Often fungal (e.g., Oidium spp.), thrives in high humidity with low light.",
+        "quick_tip": "Improve air circulation, apply Wettable Sulfur (2 g/L), stop overhead irrigation."
+    }
+}

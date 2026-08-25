@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChiliDoc - Healthy Plant Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen font-sans">
+
+<div class="max-w-5xl mx-auto p-6">
+
+  <button onclick="goBack()" 
+    class="mb-6 bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition shadow-lg font-bold">
+    ← Back to Dashboard
+  </button>
+
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+
+    <div class="relative">
+        <img src="{{ url_for('static', filename='images/healthy_leaf.JPG') }}" class="w-full h-64 object-contain bg-gray-100" alt="Healthy Leaf">
+        <div class="absolute bottom-0 left-0 bg-gradient-to-t from-green-900/80 to-transparent w-full p-6 text-white">
+            <h1 class="text-4xl font-bold">Your Plant is Healthy! ✨</h1>
+            <p class="text-green-100 mt-2 text-lg font-medium">Keep up the great work for a successful harvest!</p>
+        </div>
+    </div>
+
+    <div class="p-8 space-y-10">
+
+      <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-3xl border-2 border-amber-200 shadow-sm">
+        <h2 class="text-2xl font-bold text-amber-800 mb-6 flex items-center">
+          <span class="mr-3 text-3xl">🚀</span> How to Maximize Your Harvest
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <h3 class="font-bold text-amber-700 text-lg">💎 Recommended Fertilizers</h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded mt-1 mr-3 shadow-sm">K44</span>
+                        <span><b>K44 (High Potassium):</b> Apply every 2 weeks after flowering begins. It increases chili size, weight, and color vibrancy.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded mt-1 mr-3 shadow-sm">Albert's</span>
+                        <span><b>Albert's Solution:</b> A complete micronutrient mix. Best applied as a foliar spray to ensure the plant stays lush and green.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded mt-1 mr-3 shadow-sm">TDM</span>
+                        <span><b>Top Dressing Mixture:</b> Use during the early growth phase to promote bushier plants and more branches.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white/80 p-5 rounded-2xl border border-amber-100 shadow-sm">
+                <h3 class="font-bold text-amber-700 mb-3 flex items-center">
+                    <span class="mr-2 text-xl">🌸</span> Flower & Pod Protection
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Prevent flower drop and encourage more fruit by using <b>Boron-enriched</b> liquid fertilizers. Ensure consistent watering during the fruiting stage; dry soil can cause young chilies to fall off.
+                </p>
+                <div class="bg-orange-100 p-3 rounded-lg border-l-4 border-orange-500">
+                    <p class="text-xs font-bold text-orange-700 italic">
+                        ⭐ Pro Tip: Boosting potassium levels during peak bloom can increase your total yield weight by up to 30%!
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <hr class="border-gray-100">
+
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100 transition hover:scale-105">
+            <div class="text-3xl mb-2">🍃</div>
+            <h3 class="font-bold text-green-800">Rich Foliage</h3>
+            <p class="text-sm text-gray-600">Deep green leaves indicate perfect nutrient absorption.</p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100 transition hover:scale-105">
+            <div class="text-3xl mb-2">💪</div>
+            <h3 class="font-bold text-green-800">Strong Stem</h3>
+            <p class="text-sm text-gray-600">A sturdy stem supports the weight of heavy chili clusters.</p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100 transition hover:scale-105">
+            <div class="text-3xl mb-2">🔥</div>
+            <h3 class="font-bold text-green-800">Healthy Pods</h3>
+            <p class="text-sm text-gray-600">Chilies should be firm, shiny, and free of soft spots.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-2xl border-2 border-dashed border-green-200">
+          <h2 class="text-xl font-bold text-green-800 mb-4 flex items-center">
+            <span class="mr-2">📝</span> Daily Maintenance
+          </h2>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold mr-3">✔</span>
+                <span>Maintain moist soil (water at the base, not the leaves).</span>
+            </li>
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold mr-3">✔</span>
+                <span>Check daily for pests like aphids or thrips under leaves.</span>
+            </li>
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold mr-3">✔</span>
+                <span>Prune any yellowing bottom leaves to improve air flow.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-emerald-50 p-6 rounded-2xl border-l-4 border-emerald-500">
+          <h2 class="text-xl font-bold text-emerald-800 mb-4 flex items-center">
+            <span class="mr-2">☀️</span> Sunlight & Air
+          </h2>
+          <p class="text-gray-700 mb-3">Chili plants love the sun. Ensure at least <b>6-8 hours</b> of direct sunlight for the best spice and flavor.</p>
+          <p class="text-gray-700">Keep spacing between plants wide to allow air to dry any dew, preventing fungal growth.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="text-center text-gray-500 mt-8 text-sm italic">
+    "A well-fed plant is a high-yielding plant. Keep it up!"
+  </p>
+
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "/";
+}
+</script>
+
+</body>
+</html>

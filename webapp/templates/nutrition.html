@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChiliDoc - Nutrition Deficiency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 to-gray-100 min-h-screen">
+
+<div class="max-w-5xl mx-auto p-6">
+
+  <button onclick="goBack()" 
+    class="mb-6 bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700 transition shadow-lg font-bold">
+    ← Back to Dashboard
+  </button>
+
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+
+    <div class="relative">
+        <img src="{{ url_for('static', filename='images/nutrition_deficiency.JPG') }}" class="w-full h-64 object-contain bg-gray-100" alt="Nutrition Deficiency Symptoms">
+        <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent w-full p-6">
+            <h1 class="text-4xl font-bold text-white">
+                Nutrition Deficiency 🧪
+            </h1>
+        </div>
+    </div>
+
+    <div class="p-8 space-y-8">
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-sm">
+          <h2 class="text-xl font-bold text-blue-800 mb-3 flex items-center">
+            <span class="mr-2">🔍</span> Why does this happen?
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li>Lack of <b>Nitrogen (N), Phosphorus (P), or Potassium (K)</b></li>
+            <li>Soil pH level is too high or too low</li>
+            <li>Leaching of nutrients due to heavy rain</li>
+            <li>Poor soil quality or lack of organic compost</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-2xl border-l-4 border-red-500 shadow-sm">
+          <h2 class="text-xl font-bold text-red-800 mb-3 flex items-center">
+            <span class="mr-2">⚠️</span> Key Signs
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-2">
+            <li><b>Yellowing leaves:</b> (Lack of Nitrogen)</li>
+            <li><b>Purple leaf edges:</b> (Lack of Phosphorus)</li>
+            <li><b>Burnt leaf tips:</b> (Lack of Potassium)</li>
+            <li>Slow growth and small, weak chili pods</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-500">
+          <h2 class="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+            <span class="mr-2">🚶</span> Quick Fixes
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Test your soil pH to check acidity.</li>
+            <li>Add high-quality compost or cow manure.</li>
+            <li>Apply liquid fertilizer for faster absorption.</li>
+            <li>Loosen the soil around the roots for better air.</li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-2xl border-l-4 border-purple-500">
+          <h2 class="text-xl font-bold text-purple-800 mb-3 flex items-center">
+            <span class="mr-2">🛡️</span> Long-term Prevention
+          </h2>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Apply balanced NPK fertilizer every 2 weeks.</li>
+            <li>Mix organic matter into the soil before planting.</li>
+            <li>Maintain a consistent watering schedule.</li>
+            <li>Rotate crops to keep the soil healthy.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="mr-2">📋</span> Recommended Nutrients & Dosage
+        </h2>
+        <div class="overflow-hidden border border-gray-200 rounded-2xl shadow-sm">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="p-4 font-semibold uppercase text-sm">Nutrient</th>
+                <th class="p-4 font-semibold uppercase text-sm">Best Source</th>
+                <th class="p-4 font-semibold uppercase text-sm">Dosage</th>
+                <th class="p-4 font-semibold uppercase text-sm">Application</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700 divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Nitrogen (N)</td>
+                <td class="p-4 text-sm italic text-gray-500">Urea / Compost</td>
+                <td class="p-4 font-semibold">2–3 g/L</td>
+                <td class="p-4">Apply to soil or foliar spray</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Phosphorus (P)</td>
+                <td class="p-4 text-sm italic text-gray-500">Superphosphate</td>
+                <td class="p-4 font-semibold">2 g/L</td>
+                <td class="p-4">Mix into soil near root zone</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Potassium (K)</td>
+                <td class="p-4 text-sm italic text-gray-500">Muriate of Potash</td>
+                <td class="p-4 font-semibold">2 g/L</td>
+                <td class="p-4">Apply during fruiting stage</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition">
+                <td class="p-4 font-medium text-green-700">Magnesium (Mg)</td>
+                <td class="p-4 text-sm italic text-gray-500">Epsom Salt</td>
+                <td class="p-4 font-semibold">1 g/L</td>
+                <td class="p-4">Spray on leaves once a month</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="text-center text-gray-500 mt-8 text-sm italic">
+    * Tip: Organic compost is the best long-term solution for nutrient-rich soil!
+  </p>
+
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "/";
+}
+</script>
+
+</body>
+</html>
